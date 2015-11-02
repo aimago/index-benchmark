@@ -1,0 +1,76 @@
+q-o-o(point, 5%, 10%, 15%, 25%)
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_orderkey=1000000000
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_orderkey>1995000000
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_orderkey>1890000000
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_orderkey>1785000000
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_orderkey>1575000000
+
+q-qs-qs(point, 5%, 10%, 15%, 25%)
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate='1995-10-05' and l_quantity=18
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1993-08-11' and l_shipdate<'1996-01-01' and l_quantity<9
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1993-08-11' and l_shipdate<'1996-01-01' and l_quantity<16
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1993-08-11' and l_shipdate<'1996-01-01' and l_quantity<23
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1993-08-11' and l_shipdate<'1996-01-01' and l_quantity<40
+
+q-qds-qds(point, 5%, 10%, 15%, 25%)
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount=0.03 and l_quantity=40 and l_shipdate='1993-03-11'
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>0.01 and l_discount<0.07 and l_quantity<36 and l_shipdate>='1994-01-01' and l_shipdate<'1995-01-01'
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>0.01 and l_discount<0.07 and l_quantity<36 and l_shipdate>='1993-01-01' and l_shipdate<'1995-01-01'
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>0.01 and l_discount<0.07 and l_quantity<40 and l_shipdate>='1993-01-01' and l_shipdate<'1995-08-01'
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>0.01 and l_discount<0.07 and l_quantity<40 and l_shipdate>='1993-01-01' and l_shipdate<'1997-12-01'
+
+q-dse-dse(point, 5%, 10%, 15%, 25%)
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount=0.07 and l_extendedprice=49185.90 and l_shipdate='1995-01-25'
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>0.01 and l_discount<0.07 and l_extendedprice>10000 and l_extendedprice<=80000 and l_shipdate>='1994-01-01' and l_shipdate<'1995-01-01'
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>0.01 and l_discount<0.07 and l_extendedprice>10000 and l_extendedprice<=72000 and l_shipdate>='1993-01-01' and l_shipdate<'1995-01-01'
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>0.01 and l_discount<0.07 and l_extendedprice>10000 and l_extendedprice<=90000 and l_shipdate>='1993-01-01' and l_shipdate<'1995-08-01'
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>0.01 and l_discount<0.07 and l_extendedprice>10000 and l_extendedprice<=75000 and l_shipdate>='1993-01-01' and l_shipdate<'1997-12-01'
+
+q-s-qds(point, 5%, 10%, 15%, 25%)
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate='1993-10-05'
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1992-01-01' and l_shipdate<'1992-06-25'
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1992-01-01' and l_shipdate<'1992-11-01'
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1992-01-01' and l_shipdate<'1993-02-05'
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1992-01-01' and l_shipdate<'1993-10-05'
+
+q-q-qds(point, 5%, 10%, 15%, 25%)
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_quantity=18
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_quantity<4
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_quantity<6
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_quantity<9
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_quantity<14
+
+q-d-qds(point, 5%, 10%, 15%, 25%)
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount=0.03
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount=0
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>=0 and l_discount<=0.01
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>=0 and l_discount<=0.02
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>=0 and l_discount<=0.03
+
+q-e-dse(point, 5%, 10%, 15%, 25%)
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_extendedprice=12345
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_extendedprice>10000 and l_extendedprice<=14000
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_extendedprice>10000 and l_extendedprice<=17500
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_extendedprice>10000 and l_extendedprice<=21000
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_extendedprice>10000 and l_extendedprice<=27500
+
+q-qs-qds(point, 5%, 10%, 15%, 25%)
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate='1993-08-11' and l_quantity=16
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1993-08-11' and l_shipdate<'1996-01-01' and l_quantity<9
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1993-08-11' and l_shipdate<'1996-01-01' and l_quantity<16
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1993-08-11' and l_shipdate<'1996-01-01' and l_quantity<23
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1993-08-11' and l_shipdate<'1996-01-01' and l_quantity<40
+
+q-ds-qds(point, 5%, 10%, 15%, 25%)
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate='1992-08-11' and l_discount=0.06
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1993-08-11' and l_shipdate<'1995-04-25' and l_discount >= 0 and l_discount<=0.01
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1993-08-11' and l_shipdate<'1996-01-01' and l_discount>=0 and l_discount<=0.03
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1993-08-11' and l_shipdate<'1996-01-01' and l_discount >=0 and l_discount<=0.06
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_shipdate>='1992-08-11' and l_shipdate<'1995-03-01' and l_discount >=0.01 and l_discount<=0.07
+
+q-qd-qds(point, 5%, 10%, 15%, 25%)
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount=0.02 and l_quantity=15
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>=0 and l_discount<=0.1 and l_quantity<4
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>=0 and l_discount<=0.1 and l_quantity<6
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>= 0 and l_discount<=0.1 and l_quantity<9
+select sum(l_extendedprice*(1-l_discount)) as revenue from table where l_discount>=0 and l_discount<=0.1 and l_quantity<13
